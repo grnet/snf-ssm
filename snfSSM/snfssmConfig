@@ -1,0 +1,44 @@
+# Copyright (C) 2014 GRNET S.A.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+
+[Main]
+# URLs relates to Synnefo endpoints
+astakos_url =  ###ASTAKOS_URL###
+compute_url = ###CYCLADES_URL###
+snf_occi_url = ###SNF_OCCI_URL###
+
+# Paths to log and spool files
+logfile_path = /var/log/apel/snfssm.log
+spooldir_path = /var/spool/snfssm
+
+# Set the debug level (may be DEBUG|INFO)
+debug_level = INFO
+
+# tenants names for which VM accounting should be extracted (comma separated list)
+tenants = ###TENANT_NAME_LIST###
+
+gocdb_sitename = ###SITE_NAME###
+
+# cloud management platform
+cloud_type = Synnefo
+
+# SSM related
+ssm_input_header = APEL-cloud-message: v0.2
+ssm_input_sep = %%
+ssm_input_path = /var/spool/apel/outgoing/synnefo
+
+# path to the VOMS/snf auth configuration file
+voms_tenants_mapping = /etc/snf/voms.json
